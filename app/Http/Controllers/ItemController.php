@@ -11,7 +11,8 @@ class ItemController extends Controller
      */
     public function index()
     {
-        //
+        // views/item/index.blade.php
+        return view('item.index');
     }
 
     /**
@@ -19,7 +20,8 @@ class ItemController extends Controller
      */
     public function create()
     {
-        //
+        // views/item/create.blade.php
+        return view('item.create');
     }
 
     /**
@@ -27,17 +29,20 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //TODO: Requestからデータを取得
+        //TODO: データベースに保存
+        //TODO: リダイレクト
+        dd($request);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(int $id)
     {
-        // $item[1] = "コーヒー";
-        // $item[2] = "紅茶";
-        // $item[3] = "ほうじ茶";
+        // $items[1] = "コーヒー";
+        // $items[2] = "紅茶";
+        // $items[3] = "ほうじ茶";
         $items = [
             1 => 'コーヒー',
             2 => '紅茶',
@@ -50,7 +55,7 @@ class ItemController extends Controller
         // ビューに受け渡すデータ生成
         $data = ['item' => $item];
 
-        // resources/views/item/show.blade.phpを表示
+        // reources/views/item/show.blade.php を表示
         // データを受け渡す
         return view('item.show', $data);
     }
