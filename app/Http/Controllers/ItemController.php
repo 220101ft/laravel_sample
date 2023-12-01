@@ -81,7 +81,7 @@ class ItemController extends Controller
         $item = Item::find($id);
         dd($item);
         // 編集画面を表示
-
+        
     }
 
     /**
