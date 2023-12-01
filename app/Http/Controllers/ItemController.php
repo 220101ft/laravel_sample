@@ -114,6 +114,5 @@ class ItemController extends Controller
 
         // 一覧画面にリダイレクト
         return redirect(route('item.index'));
-
     }
 }
