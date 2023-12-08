@@ -28,6 +28,7 @@ class ItemRequest extends FormRequest
         ];
     }
 
+    // エラーメッセージ
     public function messages()
     {
         return [
