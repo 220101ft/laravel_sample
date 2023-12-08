@@ -36,17 +36,8 @@ class ItemController extends Controller
      */
     public function store(ItemRequest $request)
     {
-        // dd($request);
-        // dd($request->all());
-        //Requestからデータを取得
         $data = $request->all();
-        // データベースに保存
-        // INSERT INTO items (name, price) VALUES (xxxx, xxxx);
-        // Eloquent
         Item::create($data);
-        // QueryBuilder
-        // DB::table('items') -> create($data);
-        // リダイレクト
         return redirect(route('item.index'));
     }
 
@@ -91,7 +82,7 @@ class ItemController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, int $id)
+    public function update(ItemRequest $request, int $id)
     {
         $data = $request->all();
         // dd($data);
