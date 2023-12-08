@@ -28,6 +28,14 @@ class ItemRequest extends FormRequest
         ];
     }
 
+    public function attributes()
+    {
+        return [
+            'name' => __('messages.item_name'),
+            'price' => __('messages.price'),
+        ];
+    }
+
     // エラーメッセージ
     public function messages()
     {
