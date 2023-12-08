@@ -10,20 +10,20 @@
                         @csrf
 
                         <div>
-                            <label for="item_name">商品名</label>
+                            <label for="item_name">{{ __('messages.item_name') }}</label>
                             <input type="text" name="name" value="{{ $item->name }}">
                         </div>
                         <div>
-                            <label for="item_price">価格</label>
+                            <label for="item_price">{{ __('messages.price') }}</label>
                             <input type="text" name="price" value="{{ $item->price }}">
                         </div>
                         <button>更新</button>
                     </form>
-                    <a href="{{ route('item.index') }}">戻る</a>
+                    <a href="{{ route('item.index') }}">{{ __('messages.back') }}</a>
 
                     <form action="{{ route('item.destroy', $item->id) }}" method="post">
                         @csrf
-                        <button>削除</button>
+                        <button>{{ __('messages.delete') }}</button>
                     </form>
                 </div>
             </div>
