@@ -27,4 +27,14 @@ class ItemRequest extends FormRequest
             'price' => ['required', 'integer', 'min:0', 'max:100000'],
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'name.required' => '商品名を入力してください',
+            'price.required' => '価格を入力してください',
+            'price.integer' => '価格を数値で入力してください',
+            'price.min' => '価格を数値で入力してください',
+        ];
+    }
 }
